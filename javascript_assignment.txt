@@ -1,0 +1,72 @@
+==============================================================
+        JAVASCRIPT ASSIGNMENT
+   Topic: Built-in Functions & Events
+==============================================================
+
+INSTRUCTIONS:
+- Answer ALL THREE (3) questions.
+- Write your code neatly and add comments to explain your steps.
+- You may test your code in the browser console or in an HTML page.
+
+--------------------------------------------------------------
+QUESTION 1: Simple Calculator with Validation
+(Covers: prompt(), parseFloat(), parseInt(), isNaN(), eval(), alert())
+--------------------------------------------------------------
+Write a program that does the following:
+
+  a) Use prompt() to collect TWO numbers from the user.
+  b) Convert the first number using parseFloat() and the second
+     using parseInt(). In a comment, explain the difference
+     between what these two functions return.
+  c) Before doing any maths, use isNaN() to check whether the
+     user actually entered valid numbers. If either entry is
+     NOT a number, show an alert() that says
+     "Please fill all the form fields with valid numbers".
+  d) If both are valid, calculate and display the SUM of the
+     two numbers.
+  e) Bonus: show how eval() could be used to evaluate the
+     expression "2 + 2", and explain in one sentence why using
+     eval() on user input can be dangerous.
+
+--------------------------------------------------------------
+QUESTION 2: Confirm Dialog & Decision Making
+(Covers: confirm(), if/else, alert())
+--------------------------------------------------------------
+A website wants to ask a user whether they would like to
+continue to the next page.
+
+  a) Use confirm("Do you want to continue?") and store the
+     result in a variable called userChoice.
+  b) In a comment, state what TYPE of value confirm() returns
+     when the user clicks "OK" and when they click "Cancel".
+  c) Using an if/else statement:
+        - If the user clicks OK, show an alert that says
+          "User continues".
+        - If the user clicks Cancel, show an alert that says
+          "User cancels process".
+  d) Explain in one or two sentences why confirm() is more
+     useful than alert() in this situation.
+
+--------------------------------------------------------------
+QUESTION 3: DOM Events
+(Covers: getElementById(), addEventListener(), querySelectorAll(),
+forEach(), changing styles)
+--------------------------------------------------------------
+Create a small HTML page and a JavaScript file.
+
+  a) The HTML page should contain:
+        - A button with the id "changeColor".
+        - At least THREE italic <i> elements containing any text.
+
+  b) In your JavaScript:
+        - Select the button using getElementById().
+        - Add a "click" event listener to the button using
+          addEventListener().
+        - When the button is clicked, select ALL the italic
+          <i> elements using querySelectorAll().
+        - Loop through them with forEach() and change the
+          colour of each italic text to "blue".
+
+  c) Short answer: In your own words, explain what an EVENT is
+     in JavaScript, and give one other example of an event
+     (other than "click"). 

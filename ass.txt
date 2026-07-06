@@ -1,0 +1,91 @@
+Banking System Simulation
+
+Create a simple banking object containing:
+
+accountName
+accountNumber
+balance
+Then create functions for:
+
+Deposit
+Withdraw
+Check Balance
+Rules
+
+Withdrawal should fail if amount is greater than balance.
+Use template literals for all messages.
+
+Social Media User Database
+
+Create an array containing at least 5 users.
+
+Each user should have:
+
+{
+   username,
+   email,
+   followers,
+   isVerified
+}
+Then:
+
+Display all verified users
+Display users with followers greater than 5000
+Add a new user using .push()
+Remove one user using .splice()
+Display only first 3 users using .slice()
+
+Sentence Manipulation System
+
+Given this sentence:
+
+"Javascript is very interesting and javascript is powerful"
+Perform the following:
+
+Convert all text to uppercase
+Replace all "javascript" with "JS"
+Slice out "interesting"
+Split the sentence into an array
+Display total number of characters
+
+
+E-Commerce Product Manager
+
+Create an array of products.
+
+Each product should contain:
+
+{
+   productName,
+   price,
+   category
+}
+Then:
+
+Add 2 new products using .push()
+Remove the last product using .pop()
+Add a product at the beginning using .unshift()
+Remove first product using .shift()
+Convert all product names into a single string using .join()
+
+
+Student Score Analyzer
+
+Create a function that accepts 5 scores.
+
+The function should:
+
+Calculate:
+total
+average
+Return: grade
+Grading System
+
+70+ => A
+60–69 => B
+50–59 => C
+40–49 => D
+Below 40 => F
+Extra Requirement
+
+Store all scores inside an array.
