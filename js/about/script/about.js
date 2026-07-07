@@ -441,9 +441,11 @@ function setDataToSessionStorage(key, value) {
   sessionStorage.setItem(key, value);
 }
 // const name= prompt("Entername")
-setDataToSessionStorage("name", "CPISM");
-setDataToSessionStorage("Age", "234"); //calling the function
+setDataToSessionStorage("name", "Omolola");
+setDataToSessionStorage("Age", 2345); //calling the function
 setDataToSessionStorage("Hobby", "Dancing");
+console.log(parseInt(sessionStorage.getItem("Age")))
+
 
 // Getting Data from session storage
 
@@ -456,7 +458,7 @@ function getDataFromSessionStorage(key) {
 
   return sessionStorage.getItem(key);
 }
-getDataFromSessionStorage();
+getDataFromSessionStorage("name");
 
 //Example
 const nameS = sessionStorage.getItem("name");
@@ -476,7 +478,7 @@ function setUserValues() {
   ) {
     userNameEle.style.display = "none";
     emailEle.style.display = "none";
-    // window.location.href = "/signin.html";
+    // window.location.href = "/signin.html"; // Go back to sign in if there is no data in the session storage
   } else {
     userNameEle.style.display = "block";
     emailEle.style.display = "block";
@@ -487,8 +489,8 @@ function setUserValues() {
 setUserValues();
 
 function signOut() {
-  sessionStorage.removeItem("username"); // deleting the values fro the storage
-  sessionStorage.removeItem("email"); // deleting the values ffromt the storage
+  sessionStorage.removeItem("username"); // deleting the values from the storage
+  sessionStorage.removeItem("email"); // deleting the values from the storage
   window.location.href = "/signin.html"; // navigates back to sign in
 }
 // Local storage
