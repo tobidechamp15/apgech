@@ -204,8 +204,8 @@ async function getPizza() {
   // console.log(pizza);
 
   await orderPizza();
-  console.log("Pizza");
 }
+console.log("Pizza");
 
 function orderPizza() {
   return fetch("https://jsonplaceholder.typicode.com/users")
