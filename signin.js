@@ -30,7 +30,7 @@ function handleSubmit(event) {
   // Validation ends
   sessionStorage.setItem("username", username);
   sessionStorage.setItem("email", email);
-  window.location.href = "/index.html"; // point of navigation 
+  window.location.href = "/index.html"; // point of navigation
 }
 
 const password = document.getElementById("password");
@@ -123,8 +123,8 @@ function mySecond() {
 
 // ------------Asynchronous Concept------------
 
-// Synchronous - Javasript standard flow is executing line by line
-// Timers - Allows code to run while other code is waiting.
+// Synchronous - Javasript standard flow is executing line by line  //Familiar
+// Timers - Allows code to run while other code is waiting.  //Familiar
 //Callbacks
 
 setTimeout(myFunction, 3000);
@@ -132,8 +132,8 @@ setTimeout(myFunction, 3000);
 function myFunction() {
   // alert("I love You !!");
 }
-// EVents == Stores callback function waiting to be executed (event Listeners)
-firstBtn.addEventListener("click", clickFirstBtn);
+// EVents == Stores callback function waiting to be executed (event Listeners)  //Familiar
+// firstBtn.addEventListener("click", clickFirstBtn);
 
 //Promises = Tools to handle asynchronous operations cleanly.
 
@@ -151,3 +151,72 @@ firstBtn.addEventListener("click", clickFirstBtn);
 
 // Parallel means doing multiple things at the same time
 // Ascynchronous means switching between tasks
+
+function setTimeoutAsyncExplanation() {
+  console.log("1"); // Synchronous
+  setTimeout(logNumberTwo, 4000);
+  console.log("3");
+  console.log("4");
+  setTimeout(logNumberThree, 0);
+}
+
+function logNumberTwo() {
+  console.log("2");
+}
+function logNumberThree() {
+  console.log("3");
+}
+setTimeoutAsyncExplanation();
+
+function foodOrderingSystem() {
+  console.log("Ordering Food");
+
+  setTimeout(function () {
+    console.log("food is ready");
+  }, 4000);
+
+  console.log("While we wait, Lets the set the table");
+  console.log("While we wait, Lets the set the table");
+  console.log("While we wait, Lets the set the table");
+}
+
+// foodOrderingSystem();
+
+// Async and Await
+
+// There are older ways to write async code (callbacks, promises),
+// This is the modern and easy way
+
+// The Two Simple Rules
+
+//Rule 1 Put the word async before the fucntion to turn it into an "async function"
+
+async function sayHello() {
+  console.log("Hello!");
+}
+
+// Rule 2 Inside an async function, you can use await before a slow task, and Javascript will wait for the it to finish before handling the result
+
+async function getPizza() {
+  console.log("Ordering Pizzaaa...");
+
+  // const pizza = await orderPizza(); // User can have slow network, //
+  // console.log(pizza);
+
+  await orderPizza();
+  console.log("Pizza");
+}
+
+function orderPizza() {
+  return fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+      // console.log(response.json());
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    });
+  // }, 4000);
+}
+
+getPizza();
